@@ -52,9 +52,7 @@ public class TodoService {
                     Toast.makeText(contexto, "Falha na requisição!" + error.getMessage(), Toast.LENGTH_SHORT).show();
                 });
         RequestQueue queue = Volley.newRequestQueue(contexto);
-        System.out.println("Antes de ir para a queue");
         queue.add(request);
-        System.out.println("Depois de ir para a queue");
     }
 
 }

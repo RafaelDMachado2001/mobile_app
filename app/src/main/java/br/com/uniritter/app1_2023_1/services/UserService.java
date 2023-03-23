@@ -50,7 +50,6 @@ public class UserService {
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET,
                 "https://jsonplaceholder.typicode.com/users", null,
                 response -> {
-                    System.out.println("Recebi o retorno!");
                     for (int i = 0; i < response.length(); i++) {
                         try {
                             JSONObject json = response.getJSONObject(i);
@@ -67,9 +66,7 @@ public class UserService {
                     Toast.makeText(contexto, "Ocorreu uma falha na requisição "+error.getMessage(), Toast.LENGTH_LONG).show();
                 });
         RequestQueue queue = Volley.newRequestQueue(contexto);
-        System.out.println("Antes de ir para a queue");
         queue.add(request);
-        System.out.println("Depois de ir para a queue");
     }
 
 }

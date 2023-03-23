@@ -27,7 +27,6 @@ import br.com.uniritter.app1_2023_1.services.AlbumService;
 import br.com.uniritter.app1_2023_1.services.CommentService;
 import br.com.uniritter.app1_2023_1.services.PhotoService;
 import br.com.uniritter.app1_2023_1.services.PostService;
-import br.com.uniritter.app1_2023_1.services.ServiceDone;
 import br.com.uniritter.app1_2023_1.services.TodoService;
 import br.com.uniritter.app1_2023_1.services.UserService;
 
@@ -87,33 +86,39 @@ public class Activity2 extends AppCompatActivity  {
 
     }
     private void getAllUsers() {
-        System.out.println("Antes -> "+UserRepository.getInstance().getUsers());
-        UserService.getAllUsers(this, ()->System.out.println("Depois -> "+ UserRepository.getInstance().getUsers()));
+        System.out.println("Visualizando todos os USERS \n");
+        System.out.println("*************************** \n");
+        UserService.getAllUsers(this, ()->System.out.println(UserRepository.getInstance().getUsers()));
     }
 
     private void getAllPosts() {
-        System.out.println("Antes -> " + PostRepository.getInstance().getPosts());
-        PostService.getAllPosts(this, ()->System.out.println("Depois -> " + PostRepository.getInstance().getPosts()));
+        System.out.println("Visualizando todos os POSTS \n");
+        System.out.println("*************************** \n");
+        PostService.getAllPosts(this, ()->System.out.println(PostRepository.getInstance().getPosts()));
     }
 
     private void getAllComments() {
-        System.out.println("Antes -> " + CommentRepository.getInstance().getComments());
-        CommentService.getAllComments(this, ()->System.out.println("Depois -> " + CommentRepository.getInstance().getComments()));
+        System.out.println("Visualizando todos os COMMENTS \n");
+        System.out.println("*************************** \n");
+        CommentService.getAllComments(this, ()->System.out.println(CommentRepository.getInstance().getComments()));
     }
 
     private void getAllAlbums() {
-        System.out.println("Antes -> " + AlbumRepository.getInstance().getAlbums());
-        AlbumService.getAllAlbums(this, ()->System.out.println("Depois -> " + AlbumRepository.getInstance().getAlbums()));
+        System.out.println("Visualizando todos os ALBUMS \n");
+        System.out.println("*************************** \n");
+        AlbumService.getAllAlbums(this, ()->System.out.println(AlbumRepository.getInstance().getAlbums()));
     }
 
     private void getAllPhotos() {
-        System.out.println("Antes -> " + PhotoRepository.getInstance().getPhotos());
-        PhotoService.getAllPhotos(this, ()->System.out.println("Depois -> " + PhotoRepository.getInstance().getPhotos()));
+        System.out.println("Visualizando todos as PHOTOS \n");
+        System.out.println("*************************** \n");
+        PhotoService.getAllPhotos(this, ()->System.out.println(PhotoRepository.getInstance().getPhotos()));
     }
 
     private void getAllTodos() {
-        System.out.println("Antes -> " + TodoRepository.getInstance().getTodos());
-        TodoService.getAllTodos(this, ()->System.out.println("Depois -> " + TodoRepository.getInstance().getTodos()));
+        System.out.println("Visualizando todos os TODOS \n");
+        System.out.println("*************************** \n");
+        TodoService.getAllTodos(this, ()->System.out.println(TodoRepository.getInstance().getTodos()));
     }
 
 
